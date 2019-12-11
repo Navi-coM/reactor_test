@@ -1,0 +1,133 @@
+@import "bootstrap";
+@import "fonts";
+
+// Мои переменные
+
+$textColor: #eb4d86;
+$red: #cc2eaa;
+$green: #2ecc71;
+$fontFamMain: Arial;
+$fontsizMain: 17px;
+$fontsizMenu: 20px;
+$paddingTopRow: 15px;
+$colorMainBackrg: #f2f2f2;
+$paddingText: 10px 0;
+$lineHeigthMain: 24px;
+
+//  Изменённые переменные Bootstrap
+
+.btn-success {
+  background: #74c241;
+  border-color: #74c241;
+  font-weight: bold;
+  font-size: $fontsizMain;
+}
+.btn-success:hover {
+  background-color: #18c53c;
+  border-color: #2ed32e;
+}
+
+//
+
+ul,
+li {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: $fontFamMain;
+  line-height: $lineHeigthMain;
+}
+header {
+  border-bottom: 10px solid #009ff4;
+  .user-change-blck {
+    padding: $paddingTopRow;
+    padding-right: 20px;
+    width: 100%;
+    & a {
+      position: relative;
+      font-size: $fontsizMain;
+      color: #eb4d86;
+      &:after {
+        content: " ";
+        background: url("../img/path-right.png") no-repeat;
+        width: 10px;
+        height: 15px;
+        position: absolute;
+        top: 2px;
+        right: -15px;
+      }
+    }
+  }
+  .header-logo {
+    padding-top: 10px;
+    &_text {
+      letter-spacing: 1.5px;
+      color: #e42469;
+    }
+  }
+  .header-menu_item {
+    font-size: $fontsizMenu;
+    font-weight: 700;
+    color: #009ff4;
+  }
+  .header-menu_item-cafe a {
+    color: #000;
+  }
+}
+
+.main {
+  background: $colorMainBackrg;
+  .main-private-blck {
+    padding: $paddingTopRow;
+    & a {
+      position: relative;
+      font-size: $fontsizMain;
+      color: #0094df;
+      &:after {
+        content: " ";
+        background: url("../img/path-right.png") no-repeat;
+        transform: rotate(180deg);
+        width: 10px;
+        height: 15px;
+        position: absolute;
+        top: 0;
+        left: -15px;
+      }
+    }
+  }
+  .main-title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 35px;
+  }
+  .main-title_descrip {
+    font-size: $fontsizMain;
+    font-weight: 600;
+    margin-top: 10px;
+  }
+  .main-title_text {
+    font-size: $fontsizMain;
+    color: #2c3f52;
+  }
+  .btn-blck {
+    width: 100%;
+    margin: 25px 0 35px 0;
+    .post-btn-text {
+      color: #74c241;
+      padding: 0 20px;
+      line-height: 20px;
+      margin-bottom: 0;
+      & a {
+        color: #74c241;
+      }
+    }
+  }
+}
+
+footer {
+  border-top: 1px solid rgba(228, 36, 105, 0.8);
+  padding: 20px 0;
+}

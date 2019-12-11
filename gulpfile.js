@@ -7,7 +7,7 @@ var gulp = require("gulp"),
 
 function css_build(done) {
   gulp
-    .src("./scss/**/*.scss")
+    .src("./app/scss/**/*.scss")
     .pipe(sourcemaps.init())
     .pipe(
       sass({
@@ -22,28 +22,28 @@ function css_build(done) {
       })
     )
     .pipe(rename({ suffix: ".min" }))
-    .pipe(sourcemaps.write("./"))
-    .pipe(gulp.dest("./css/"))
+    .pipe(sourcemaps.write("./app/"))
+    .pipe(gulp.dest("./app/css/"))
     .pipe(browserSync.stream());
 
   done();
 }
 
 function watchSass() {
-  gulp.watch("./scss/**/*", css_build);
+  gulp.watch("./app/scss/**/*", css_build);
 }
 
 function watchFiles() {
-  gulp.watch("./scss/**/*", css_build);
-  gulp.watch("./**/*.html", browserReload);
-  gulp.watch("./**/*.js", browserReload);
-  gulp.watch("./**/*.php", browserReload);
+  gulp.watch("./app/scss/**/*", css_build);
+  gulp.watch("./app/**/*.html", browserReload);
+  gulp.watch("./app/**/*.js", browserReload);
+  gulp.watch("./app/**/*.php", browserReload);
 }
 
 function webserver(done) {
   browserSync.init({
     server: {
-      baseDir: "./"
+      baseDir: "./app"
     },
     port: 3000
   });
