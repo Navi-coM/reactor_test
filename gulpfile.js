@@ -3,7 +3,8 @@ var gulp = require("gulp"),
   sass = require("gulp-sass"),
   autoprefixer = require("gulp-autoprefixer"),
   sourcemaps = require("gulp-sourcemaps"),
-  browserSync = require("browser-sync").create();
+  browserSync = require("browser-sync").create(),
+  git = require("gulp-git");
 
 function css_build(done) {
   gulp
