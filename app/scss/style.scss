@@ -9,8 +9,8 @@ $green: #2ecc71;
 $fontFamMain: Arial;
 $fontsizMain: 17px;
 $fontsizMenu: 20px;
-$paddingTopRow: 15px;
 $colorMainBackrg: #f2f2f2;
+$colorTextMnu: #009ff4;
 $paddingText: 10px 0;
 $lineHeigthMain: 24px;
 
@@ -42,7 +42,7 @@ body {
 header {
   border-bottom: 10px solid #009ff4;
   .user-change-blck {
-    padding: $paddingTopRow;
+    padding: 7px 0;
     padding-right: 20px;
     width: 100%;
     & a {
@@ -69,8 +69,11 @@ header {
   }
   .header-menu_item {
     font-size: $fontsizMenu;
+    margin: 7px 0;
     font-weight: 700;
-    color: #009ff4;
+    a {
+      color: $colorTextMnu;
+    }
   }
   .header-menu_item-cafe a {
     color: #000;
@@ -80,7 +83,7 @@ header {
 .main {
   background: $colorMainBackrg;
   .main-private-blck {
-    padding: $paddingTopRow;
+    padding: 8px 0;
     & a {
       position: relative;
       font-size: $fontsizMain;
